@@ -10,3 +10,5 @@ RUN rm /etc/nginx/sites-enabled/*
 COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
 CMD /entrypoint.sh && nginx -g "daemon off;"
+
+RUN useradd -m -s /bin/bash -N -u 1000 user1000
