@@ -11,4 +11,4 @@ COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
 CMD /entrypoint.sh && nginx -g "daemon off;"
 
-RUN useradd -m -s /bin/bash -N -u 1000 user1000
+RUN useradd -m -s /bin/bash -u 1000 -g 1000 user1000
